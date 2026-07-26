@@ -5,6 +5,11 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -25,7 +30,7 @@ jobs:
       run: npx hexo generate
 
     - name: Upload artifact
-      uses: actions/upload-artifact@v7
+      uses: actions/upload-pages-artifact@v3
       with:
         name: hexo-public
         path: ./public
@@ -34,19 +39,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-    - name: Download artifact
-      uses: actions/download-artifact@v5
-      with:
-        name: hexo-public
-        path: ./dist
 
-    - name: Setup Wrangler
-      run: npm install -g wrangler
-
-    - name: Deploy to Cloudflare Pages
-      run: |
-        wrangler pages deploy ./dist \
-        --project-name=blog
-      env:
-        CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-        CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
