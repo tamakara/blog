@@ -102,3 +102,13 @@ theme: yilia-plus
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+# Sitemap
+sitemap:
+  path: sitemap.xml
+
+# feed
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
