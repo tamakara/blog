@@ -25,10 +25,10 @@ jobs:
       run: npx hexo generate
 
     - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
+      uses: actions/upload-artifact@v7
       with:
         name: hexo-public
-        path: public
+        path: ./public
   
   deploy:
     needs: build
@@ -38,14 +38,14 @@ jobs:
       uses: actions/download-artifact@v5
       with:
         name: hexo-public
-        path: public
+        path: ./dist
 
     - name: Setup Wrangler
       run: npm install -g wrangler
 
     - name: Deploy to Cloudflare Pages
       run: |
-        wrangler pages deploy public \
+        wrangler pages deploy ./dist \
         --project-name=blog
       env:
         CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
