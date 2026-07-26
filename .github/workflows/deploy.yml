@@ -28,3 +28,24 @@ jobs:
       uses: actions/upload-pages-artifact@v3
       with:
         path: ./public
+  
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Download artifact
+      uses: actions/download-artifact@v5
+      with:
+        name: hexo-public
+        path: public
+
+    - name: Setup Wrangler
+      run: npm install -g wrangler
+
+    - name: Deploy to Cloudflare Pages
+      run: |
+        wrangler pages deploy public \
+        --project-name=blog
+      env:
+        CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
