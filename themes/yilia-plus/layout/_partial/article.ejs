@@ -155,4 +155,8 @@
     }) %>
   <% } %>
 
+<% if (theme.giscus && theme.giscus.enable){ %>
+  <%- partial('post/giscus') %>
+<% } %>
+
 <% } %>

@@ -55,7 +55,7 @@ mathjax: true
 # Open link in a new tab | 是否在新窗口打开链接
 open_in_new:
   article: true  # 文章链接
-  menu: true   # 导航菜单
+  menu: false   # 导航菜单
   subNav: true  # 子菜单
 
 # 打赏
@@ -93,7 +93,7 @@ avatar: /img/head.jpg
 # 是否开启分享
 share_jia: true
 
-# 评论：1、畅言；2、Disqus；3、Gitment；4、Giteement
+# 评论：1、畅言；2、Disqus；3、Gitment；4、Giteement；5、Giscus
 # 不需要使用某项，直接设置值为false，或注释掉
 # 具体请参考wiki：https://github.com/JoeyBling/hexo-theme-yilia-plus/wiki
 
@@ -130,6 +130,21 @@ giteement:
   gitment_oauth:
     client_id: ''           #client ID
     client_secret: ''       #client secret
+
+# 5、Giscus----基于 GitHub Discussions 的评论系统
+giscus:
+  enable: true
+  repo: tamakara/tamakara.github.io
+  repo_id: R_kgDOTjyLjw
+  category: Announcements
+  category_id: DIC_kwDOTjyLj84DCCrY
+  mapping: pathname
+  strict: 0
+  reactions_enabled: 1
+  emit_metadata: 0
+  input_position: top
+  theme: light
+  lang: zh-CN
 
 # 访问量统计功能(不蒜子)
 busuanzi:
