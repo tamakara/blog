@@ -111,8 +111,8 @@ gitment_owner: tamakara      #你的 GitHub ID
 gitment_remote: false
 gitment_repo: 'tamakara.github.io'          #存储评论的 repo name(需要在Github创建)
 gitment_oauth:
-  client_id: 'GITMENT_CLIENT_ID'           #client ID
-  client_secret: 'GITMENT_CLIENT_SECRET'       #client secret
+  client_id: 'Ov23lisCcGhnakaWcdOx'           #client ID
+  client_secret: 'f59477f369f94936273ee25376d5e97b4a0e514c'       #client secret
 
 # 4、Giteement----【国内用户建议使用这个，相对比较快】
 # 关于如何集成:https://www.jianshu.com/p/f5c4633524c7
