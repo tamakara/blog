@@ -28,8 +28,8 @@ jobs:
 
     - name: Inject Gitment OAuth
       run: |
-        sed -i "s/\$GITMENT_CLIENT_ID/${{ secrets.GITMENT_CLIENT_ID }}/g" themes/yilia-plus/_config.yml
-        sed -i "s/\$GITMENT_CLIENT_SECRET/${{ secrets.GITMENT_CLIENT_SECRET }}/g" themes/yilia-plus/_config.yml
+        sed -i "s/GITMENT_CLIENT_ID/${{ secrets.GITMENT_CLIENT_ID }}/g" themes/yilia-plus/_config.yml
+        sed -i "s/GITMENT_CLIENT_SECRET/${{ secrets.GITMENT_CLIENT_SECRET }}/g" themes/yilia-plus/_config.yml
 
     - name: Generate Hexo
       run: npx hexo generate
