@@ -3,6 +3,7 @@ menu:
   主页: /
   学习笔记: /categories/学习笔记/
   技术实践: /categories/技术实践/
+  其他: /categories/其他/
 
 # subNav-子导航
 subNav:
@@ -19,9 +20,9 @@ subNav:
   # - weibo: "#"
   # - douban: "#"
   # - segmentfault: "#"
-  # - bilibili: "#"
+  - bilibili: "https://space.bilibili.com/39754290"
   # - acfun: "#"
-  # - mail: "mailto:zhousiwei0911@qq.com"
+  - mail: "mailto:tamakara@qq.com"
   # - facebook: "#"
   # - google: "#"
   # - twitter: "#"
@@ -71,7 +72,7 @@ weixin: /img/weixin.png
 
 # 目录
 # 目录设定：0-不显示目录； 1-文章对应的md文件里有toc:true属性，才有目录； 2-所有文章均显示目录
-toc: 1
+toc: 2
 # 根据自己的习惯来设置，如果你的目录标题习惯有标号，置为true即可隐藏hexo重复的序号；否则置为false
 toc_hide_index: true
 # 目录为空时的提示
@@ -89,7 +90,7 @@ google_analytics: ''
 favicon: /favicon.ico
 
 # 你的头像url
-avatar: /img/head.jpg
+avatar: /img/head.png
 
 # 是否开启分享
 share_jia: true
