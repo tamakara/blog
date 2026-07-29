@@ -1,7 +1,8 @@
 ﻿# Header-菜单
 menu:
   主页: /
-  随笔: /tags/随笔/
+  学习笔记: /categories/学习笔记/
+  技术实践: /categories/技术实践/
 
 # subNav-子导航
 subNav:
